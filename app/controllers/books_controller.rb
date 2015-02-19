@@ -5,4 +5,10 @@ class BooksController < ApplicationController
 
   def new
   end
+  
+  def show
+	  @book = Book.find(params[:id])
+	  @reviews = @book.reviews
+	end
+	
 end
